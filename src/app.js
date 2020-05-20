@@ -108,5 +108,5 @@ app.get('*', (req, res) =>{
 
 //runing server is asyncronous
 app.listen(3000, () => {
-    console.log('Server is up on port 3000')
+    console.log('Server is up on port 3000 and ready to work')
 })
