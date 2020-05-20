@@ -5,7 +5,7 @@ const geocode = require('./Utils/geocode')
 const forecast = require('./Utils/forecast')
 
 const app = express()
-
+const port = process.env.PORT || 3000
 
 //gives default directory name
 //console.log(__dirname)
@@ -107,6 +107,6 @@ app.get('*', (req, res) =>{
 })
 
 //runing server is asyncronous
-app.listen(3000, () => {
-    console.log('Server is up on port 3000 and ready to work')
+app.listen(port, () => {
+    console.log('Server is up on port '+ port + ' and ready to work')
 })
