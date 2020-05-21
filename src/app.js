@@ -74,7 +74,8 @@ app.get('/weather', (req, res) => {
                 humidity: forecastdata.body.current.humidity,
                 discription: forecastdata.body.current.weather[0].description,
                 location: location,
-                address: req.query.address
+                address: req.query.address,
+                icon: forecastdata.body.current.weather[0].icon
             })
                         
         }) 

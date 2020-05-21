@@ -5,7 +5,7 @@ const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 const messageThree = document.querySelector('#message-3')
-
+const messageFour = document.querySelector('#message-4')
 
 
 weatherFrom.addEventListener('submit', (e)=>{
@@ -14,6 +14,8 @@ weatherFrom.addEventListener('submit', (e)=>{
     messageOne.textContent = 'loading.................'
     messageTwo.textContent = ''
     messageThree.textContent = ''
+    messageFour.src = ""
+    messageFour.alt = ""
     
     const location = search.value
     const url = '/weather?address=' + (location)
@@ -31,6 +33,8 @@ weatherFrom.addEventListener('submit', (e)=>{
                 messageOne.textContent = data.location
                 messageTwo.textContent = data.discription
                 messageThree.textContent = 'Temperature is ' + data.temp + ' and humidity is ' + data.humidity
+                messageFour.src = "http://openweathermap.org/img/w/" + data.icon + ".png"
+                messageFour.alt = "icon"
                 }
 
             }
